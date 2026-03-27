@@ -39,6 +39,40 @@
       column-gap: 100px;
     }
   }
+  .skills {
+    &__items {
+      grid-template-columns: repeat(auto-fit, 270px);
+      justify-content: space-between;
+    }
+    &__ratings {
+      grid-template-columns: repeat(auto-fit, 350px);
+      grid-auto-rows: minmax(70px, auto);
+      justify-content: space-between;
+      // padding: 0 30px;
+    }
+  }
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: space-between;
+      row-gap: 35px;
+      .horizontal,
+      .vertical {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+  }
+  .contacts {
+    &__wrapper {
+      padding: 0;
+      grid-template-columns: 400px 520px;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 250px);
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -67,9 +101,41 @@
   }
   .resume {
     &__wrapper {
-      grid-template-columns: repeat(2, 360px);
-      column-gap: 40px;
+      grid-template-columns: 1fr;
+      row-gap: 40px;
       padding: 0;
+    }
+  }
+  .skills {
+    &__items {
+      padding: 0 20px;
+    }
+    &__ratings {
+      grid-template-columns: repeat(auto-fit, 320px);
+      justify-content: space-between;
+      padding: 0;
+      column-gap: 0;
+      &-line {
+        width: 100%;
+      }
+    }
+  }
+  .price {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 350px);
+      padding: 0;
+    }
+  }
+  .contacts {
+    &__wrapper {
+      grid-template-columns: 300px 420px;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 200px);
+    }
+    &__btn {
+      padding: 8px 25px;
+      line-height: 16px;
     }
   }
 }
@@ -88,10 +154,58 @@
     }
   }
   .resume {
+    padding-top: 40px;
     &__wrapper {
       grid-template-columns: 1fr;
-      row-gap: 50px;
+      row-gap: 40px;
+      padding-top: 20px;
+    }
+  }
+  .skills {
+    margin-top: 40px;
+
+    &__cards {
+      grid-template-columns: repeat(auto-fit, 270px);
+      justify-content: center;
+    }
+
+    &__items {
       padding: 0;
+      justify-content: center;
+      gap: 20px;
+    }
+    &__ratings {
+      grid-template-columns: repeat(auto-fit, 320px);
+      grid-auto-rows: minmax(70px, auto);
+      justify-content: center;
+      margin-top: 40px;
+      &-line {
+        width: 100%;
+      }
+    }
+  }
+  .portfolio {
+    &__wrapper {
+      justify-content: center;
+    }
+  }
+  .price {
+    margin-top: 40px;
+    &__wrapper {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  .contacts {
+    padding-top: 40px;
+    &__img {
+      display: none;
+    }
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 250px);
     }
   }
 }
@@ -135,6 +249,60 @@
     }
     &__subtitle {
       line-height: 36px;
+    }
+  }
+  .skills {
+    margin-top: 40px;
+    &__cards {
+      grid-template-columns: repeat(auto-fit, 270px);
+      justify-content: center;
+    }
+    &__ratings {
+      grid-template-columns: repeat(auto-fit, 300px);
+    }
+    &__items {
+      margin-top: 20px;
+    }
+  }
+
+  .resume {
+    padding-top: 40px;
+  }
+
+  .portfolio {
+    &__wrapper {
+      margin-top: 40px;
+    }
+  }
+  .price {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 295px);
+    }
+  }
+  .contacts {
+    padding-bottom: 50px;
+    &__form {
+      grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+    }
+    &__textarea {
+      grid-column: unset;
+      width: 100%;
+    }
+    &__triggers {
+      grid-column: unset;
+      grid-template-columns: 1fr;
+      column-gap: unset;
+      row-gap: 20px;
+    }
+    &__btn {
+      order: 2;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+    &__policy {
+      width: 180px;
+      margin: 0 auto;
+      line-height: 18px;
     }
   }
 }
