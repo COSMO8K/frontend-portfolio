@@ -110,7 +110,10 @@
             fill="black"
           />
         </svg> </a
-      ><a href="#!" class="sidepanel__link"
+      ><a
+        target="_blank"
+        href="https://github.com/COSMO8K"
+        class="sidepanel__link"
         ><svg
           width="19"
           height="20"
@@ -167,17 +170,17 @@
 
         <nav>
           <ul class="menu__list">
-            <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
-            <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
-            <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-            <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
-            <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-            <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+            <li class="menu__link"><a href="#about">ПРО МЕНЯ</a></li>
+            <li class="menu__link"><a href="#resume">МОЙ ОПЫТ</a></li>
+            <li class="menu__link"><a href="#skills">МОИ НАВЫКИ</a></li>
+            <li class="menu__link"><a href="#portfolio">МОИ РАБОТЫ</a></li>
+            <li class="menu__link"><a href="#price">ПРАЙС-ЛИСТ</a></li>
+            <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
           </ul>
         </nav>
 
         <div class="menu__social">
-          <a href="#"
+          <a target="" href="https://github.com/COSMO8K"
             ><svg
               width="20"
               height="19"
@@ -229,7 +232,7 @@
       </div>
       <div class="menu__overlay"></div>
     </div>
-    <section class="promo">
+    <section class="promo" id="promo">
       <div class="hamburger">
         <span></span><span class="long"></span><span></span>
       </div>
@@ -247,7 +250,7 @@
       </div>
     </section>
 
-    <section id="about" class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__wrapper">
           <div class="about__img">
@@ -405,7 +408,7 @@
       </div>
     </section>
 
-    <section class="resume">
+    <section class="resume" id="resume">
       <div class="container">
         <h2 class="title title_fz16 title__section-title">Опыт</h2>
         <div class="title title_fz36 title__section-subtitle">
@@ -516,7 +519,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="container">
         <h2 class="title title_fz16 title__section-title">Навыки</h2>
         <div class="title title__section-subtitle">
@@ -801,7 +804,7 @@
       </div>
     </section>
 
-    <section id="portfolio" class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="title title_fz16 title__section-title">Портфолио</h2>
         <div class="title title_fz36 title__section-subtitle">Мои работы</div>
@@ -845,7 +848,7 @@
       </div>
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
       <div class="container">
         <h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
         <div class="divider"></div>
@@ -891,7 +894,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="container">
         <div class="contacts__wrapper">
           <div class="contacts__img">
@@ -909,7 +912,10 @@
               <a href="#" class="contacts__link"
                 ><img src="icons/social/Facebook_straight .svg" alt="facebook"
               /></a>
-              <a href="#" class="contacts__link"
+              <a
+                target="_blank"
+                href="https://t.me/COSMO8K?text=Привет,%20Амин!%20Нашел%20твое%20портфолио,%20хочу%20обсудить%20сотрудничество"
+                class="contacts__link"
                 ><img src="icons/social/telegram.svg" alt="telegram"
               /></a>
               <a href="#" class="contacts__link"
@@ -917,31 +923,62 @@
               /></a>
             </div>
             <div class="title title_fz14 contacts__text">
-              Или оставьте ваши данные и я сама вам напишу:
+              Или оставьте ваши данные и я сам вам напишу:
             </div>
-            <form action="#" class="contacts__form">
+            <form
+              action="https://formsubmit.co/amin4000malik@gmail.com"
+              method="POST"
+              class="contacts__form"
+            >
+              <!-- Настройки -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="Новое сообщение с портфолио"
+              />
+
+              <input type="hidden" name="_captcha" value="false" />
+
+              <input type="hidden" name="_template" value="table" />
+
+              <!-- ВАЖНО: редирект -->
+              <input
+                type="hidden"
+                name="_next"
+                value="https://frontend-portfolio-omega-two.vercel.app/thanks.html"
+              />
+
+              <!-- Имя -->
               <div class="contacts__input">
                 <input required name="name" id="name" type="text" />
                 <label for="name">Ваше имя</label>
               </div>
+
+              <!-- Email -->
               <div class="contacts__input">
                 <input required name="email" id="email" type="email" />
                 <label for="email">Ваша почта</label>
               </div>
+
+              <!-- Сообщение -->
               <div class="contacts__textarea">
-                <textarea name="text" id="text"></textarea>
-                <label for="text">Ваше сообщение</label>
+                <textarea required name="message" id="message"></textarea>
+                <label for="message">Ваше сообщение</label>
               </div>
+
+              <!-- Кнопка -->
               <div class="contacts__triggers">
-                <button class="contacts__btn btn">Отправить сообщение</button>
+                <button type="submit" class="contacts__btn btn">
+                  Отправить сообщение
+                </button>
+
+                <!-- Политика -->
                 <div class="contacts__policy">
-                  <input required type="checkbox" />
-                  <span
-                    >Я согласен(а)
-                    <a href="/policy.html"
-                      >с политикой конфиденциальности
-                    </a></span
-                  >
+                  <input required name="policy" id="policy" type="checkbox" />
+                  <span>
+                    Я согласен(а)
+                    <a href="policy.html">с политикой конфиденциальности</a>
+                  </span>
                 </div>
               </div>
             </form>
